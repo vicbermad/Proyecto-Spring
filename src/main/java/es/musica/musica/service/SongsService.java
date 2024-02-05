@@ -26,4 +26,13 @@ public class SongsService {
     public Integer getAlbumDuration(Long idAlbum) {
         return repository.albumDuration(idAlbum);
     }
+
+    public List<Songs> findAllSongs(){
+        return repository.findAll();
+    }
+
+    public Songs addSong (Songs song){
+        return repository.save(song);
+    }
+
 }
